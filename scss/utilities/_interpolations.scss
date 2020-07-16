@@ -1,0 +1,39 @@
+/* Titulos Grandes*/
+
+@for $i from 1 to 4 {
+    .title-#{$i} {
+        font-size: 2em * $i;
+    }
+}
+@media only screen and (max-width: 576px){
+    @for $i from 1 to 4 {
+        .title-#{$i} {
+            font-size: 1.25em * $i;
+        }
+    }
+}
+
+/* Maps*/
+$artes:(
+    artearticle1: url("../img/img2/tortuga.jpg"),
+    artearticle2: url("../img/img2/gameboy.png"),
+    artearticle3: url("../img/img2/cohans.png"),
+    artearticle4: url("../img/img2/iphone.png"),
+    arte1: url("../img/img2/AmadeuPortada.jpg"),
+    arte2: url("../img/img2/Astronautachile.jpg"),
+    arte3: url("../img/img2/cohans.png"),
+    arte4: url("../img/img2/DiaMedioAmbiente.jpg"),
+    arte5: url("../img/img2/Drpet001.jpg"),
+    arte6: url("../img/img2/Drpet002.jpg"),
+    arte7: url("../img/img2/Ferrari-slider-001.png"),
+    arte8: url("../img/img2/trabajo1.png"),
+);
+@each $art, $img in $artes {
+    .back-#{$art} {
+        background-image: $img;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
